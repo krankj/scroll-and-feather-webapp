@@ -2,12 +2,15 @@ const styles = {
   global: {
     // styles for the `body`
     body: {
-      bg: "gray.400",
+      bg: "light.200",
       color: "black",
+      letterSpacing: "4px",
+      textTransform: "uppercase",
+      fontSize: "10px",
     },
     // styles for the `a`
     a: {
-      color: "teal.500",
+      color: "dark.100",
       _hover: {
         textDecoration: "underline",
       },

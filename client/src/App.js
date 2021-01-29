@@ -1,10 +1,13 @@
 import { Button, Center } from "@chakra-ui/react";
-
+import Header from "components/Header";
 function App() {
   return (
-    <Center>
-      <Button>Click me</Button>
-    </Center>
+    <>
+      <Header />
+      <Center>
+        <Button variant="outline">Submit</Button>
+      </Center>
+    </>
   );
 }
 
