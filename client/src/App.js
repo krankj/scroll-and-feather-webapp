@@ -1,16 +1,31 @@
-import { Button, Text, Center } from "@chakra-ui/react";
-import Header from "components/Header";
+import { Switch, Route, Link } from "react-router-dom";
+import ComponentWithHeader from "routes/ComponentWithHeader";
+import LandingScreen from "components/publicPages/LandingScreen";
+import LoginPage from "components/publicPages/Login";
+import { Spacer, Text } from "@chakra-ui/react";
+import Header from "components/commons/Header";
+
+const publicHeader = () => {
+  const left = <Text>Scroll and Feather</Text>;
+  const center = <Spacer />;
+  const right = <Link>Login</Link>;
+  return <Header left={left} center={center} right={right} />;
+};
+
 function App() {
   return (
     <>
-      <Header />
-      <Center h="80vh">
-        <Text>
-          This application is currently under development. <br></br>Do come back
-          a while later.
-        </Text>
-        {/* <Button variant="outline">Submit</Button> */}
-      </Center>
+      <Switch>
+        <Route exact path="/">
+          <ComponentWithHeader
+            component={LandingScreen}
+            header={publicHeader}
+          />
+        </Route>
+        <Route path="/login">
+          <LoginPage />
+        </Route>
+      </Switch>
     </>
   );
 }
