@@ -1,7 +1,7 @@
 import React from "react";
-import { Flex } from "@chakra-ui/react";
+import { Flex, Box } from "@chakra-ui/react";
 
-const Header = ({ left: Left, center: Center, right: Right }) => (
+const Header = ({ left, center, right }) => (
   <Flex
     pos="sticky"
     h="80px"
@@ -10,10 +10,15 @@ const Header = ({ left: Left, center: Center, right: Right }) => (
     align="center"
     p="4"
     px="12"
+    textAlign="center"
   >
-    {/* <Left />
-    <Center />
-    <Right /> */}
+    <Box flex="1" textAlign="left">
+      {left}
+    </Box>
+    <Box flex="1">{center}</Box>
+    <Box flex="1" textAlign="right">
+      {right}
+    </Box>
   </Flex>
 );
 
