@@ -1,7 +1,8 @@
 import { extendTheme } from "@chakra-ui/react";
-// Global style overrides
 import styles from "./styles";
 import Button from "./components/Button";
+import Input from "./components/Input";
+
 const overrides = {
   colors: {
     light: {
@@ -18,6 +19,7 @@ const overrides = {
   styles,
   components: {
     Button,
+    Input,
   },
 };
 export default extendTheme(overrides);

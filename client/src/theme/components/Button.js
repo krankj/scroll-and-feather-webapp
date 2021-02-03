@@ -31,11 +31,10 @@ const Button = {
       color: "dark.300",
       border: "1px solid",
       borderColor: "dark.300",
-      fontWeight: "bold",
       fontSize: "10px",
       _hover: {
         bg: "dark.200",
-        color: "light.100",
+        color: "light.300",
       },
       _focus: "",
       _active: "",

@@ -6,13 +6,13 @@ const styles = {
       color: "black",
       letterSpacing: "4px",
       textTransform: "uppercase",
-      fontSize: "10px",
+      fontSize: "11px",
     },
     // styles for the `a`
     a: {
       color: "dark.100",
       _hover: {
-        textDecoration: "underline",
+        color: "gray.400",
       },
     },
   },

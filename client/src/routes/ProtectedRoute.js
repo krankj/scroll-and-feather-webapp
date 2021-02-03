@@ -1,16 +1,8 @@
 import React from "react";
-import { Route, Redirect, Link } from "react-router-dom";
-import { Spacer, Text } from "@chakra-ui/react";
+import { Route, Redirect } from "react-router-dom";
 import { isAuthenticated } from "utils/Auth";
-import ComponentWithHeader from "./ComponentWithHeader";
-import Header from "components/commons/Header";
-
-const privateHeader = () => {
-  const left = <Text>Scroll and Feather</Text>;
-  const center = <Spacer />;
-  const right = <Link to="/login">Logout</Link>;
-  return <Header left={left} center={center} right={right} />;
-};
+import ComponentWithHeader from "../components/commons/ComponentWithHeader";
+import { privateHeader } from "components/headers";
 
 const ProtectedRoute = ({ children, ...rest }) => {
   return (

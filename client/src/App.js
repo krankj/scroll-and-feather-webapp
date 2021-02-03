@@ -1,9 +1,9 @@
 import { Switch, Route } from "react-router-dom";
-import ComponentWithHeader from "routes/ComponentWithHeader";
+import ComponentWithHeader from "components/commons/ComponentWithHeader";
 import LandingScreen from "components/publicPages/LandingScreen";
 import LoginPage from "components/publicPages/Login";
 import ProtectedRoute from "routes/ProtectedRoute";
-import { Heading } from "@chakra-ui/react";
+import { loginHeader } from "components/headers";
 
 function App() {
   return (
@@ -13,10 +13,10 @@ function App() {
           <ComponentWithHeader component={<LandingScreen />} />
         </Route>
         <Route path="/login">
-          <LoginPage />
+          <ComponentWithHeader component={<LoginPage />} header={loginHeader} />
         </Route>
         <ProtectedRoute path="/poet">
-          <LoginPage />
+          <div>Poet page</div>
         </ProtectedRoute>
       </Switch>
     </>

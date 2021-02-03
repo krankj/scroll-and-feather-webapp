@@ -1,7 +1,7 @@
 import React from "react";
 import { Flex, Box } from "@chakra-ui/react";
 
-const Header = ({ left, center, right }) => (
+const HeaderSkeleton = ({ left, center, right }) => (
   <Flex
     pos="sticky"
     h="80px"
@@ -22,4 +22,4 @@ const Header = ({ left, center, right }) => (
   </Flex>
 );
 
-export default Header;
+export default HeaderSkeleton;
