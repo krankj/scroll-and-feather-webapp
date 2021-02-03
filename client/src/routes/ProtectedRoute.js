@@ -5,20 +5,19 @@ import { isAuthenticated } from "utils/Auth";
 import ComponentWithHeader from "./ComponentWithHeader";
 import Header from "components/commons/Header";
 
-const Left = () => <Text>Scroll and Feather</Text>;
-const Center = () => <Spacer />;
-const Right = () => <Link>Logout</Link>;
+const privateHeader = () => {
+  const left = <Text>Scroll and Feather</Text>;
+  const center = <Spacer />;
+  const right = <Link to="/login">Logout</Link>;
+  return <Header left={left} center={center} right={right} />;
+};
 
-const privateHeader = () => (
-  <Header left={Left} center={Center} right={Right} />
-);
-
-const ProtectedRoute = ({ component, ...rest }) => {
+const ProtectedRoute = ({ children, ...rest }) => {
   return (
     <>
       {isAuthenticated() ? (
         <Route {...rest}>
-          <ComponentWithHeader component={component} header={privateHeader} />
+          <ComponentWithHeader component={children} header={privateHeader} />
         </Route>
       ) : (
         <Redirect to="/login" />

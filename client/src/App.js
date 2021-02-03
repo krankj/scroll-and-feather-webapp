@@ -2,7 +2,9 @@ import { Switch, Route } from "react-router-dom";
 import ComponentWithHeader from "routes/ComponentWithHeader";
 import LandingScreen from "components/publicPages/LandingScreen";
 import LoginPage from "components/publicPages/Login";
-// dummy commit
+import ProtectedRoute from "routes/ProtectedRoute";
+import { Heading } from "@chakra-ui/react";
+
 function App() {
   return (
     <>
@@ -13,6 +15,9 @@ function App() {
         <Route path="/login">
           <LoginPage />
         </Route>
+        <ProtectedRoute path="/poet">
+          <LoginPage />
+        </ProtectedRoute>
       </Switch>
     </>
   );

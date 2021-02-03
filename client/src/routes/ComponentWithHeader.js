@@ -15,7 +15,7 @@ const CircleIcon = (props) => (
 const publicHeader = () => {
   const left = <Text>Scroll and Feather</Text>;
   const center = <CircleIcon boxSize={4} color="red.500" />;
-  const right = <Link>Login / Signup</Link>;
+  const right = <Link to="/login">Login / Signup</Link>;
   return <Header left={left} center={center} right={right} />;
 };
 
